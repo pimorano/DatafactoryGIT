@@ -2,16 +2,14 @@
 	"name": "FHVOpen",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "CoreDataLakeStorageBackup",
+			"referenceName": "Azure OpenDataset",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"folderPath": "nyctlc/fhv",
-				"fileSystem": "root"
+				"type": "AzureBlobStorageLocation"
 			},
 			"compressionCodec": "snappy"
 		},

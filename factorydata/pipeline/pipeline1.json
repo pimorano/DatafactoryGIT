@@ -23,11 +23,23 @@
 							"wildcardFileName": "*.parquet"
 						}
 					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						}
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "FHVOpen",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "FHV",
 						"type": "DatasetReference"
 					}
 				]
