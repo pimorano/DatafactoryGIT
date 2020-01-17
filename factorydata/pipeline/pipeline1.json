@@ -18,7 +18,7 @@
 					"source": {
 						"type": "ParquetSource",
 						"storeSettings": {
-							"type": "AzureBlobFSReadSettings",
+							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
 							"wildcardFileName": "*.parquet"
 						}
@@ -29,7 +29,72 @@
 							"type": "AzureBlobFSWriteSettings"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "dispatchBaseNum",
+									"type": "String"
+								},
+								"sink": {
+									"name": "dispatchBaseNum",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "pickupDateTime",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "pickupDateTime",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "dropOffDateTime",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "dropOffDateTime",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "puLocationId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "puLocationId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "doLocationId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "doLocationId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "srFlag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "srFlag",
+									"type": "String"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
