@@ -15,6 +15,39 @@
 			},
 			"compressionCodec": "snappy"
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "dispatchBaseNum",
+				"type": "UTF8"
+			},
+			{
+				"name": "pickupDateTime",
+				"type": "INT96"
+			},
+			{
+				"name": "dropOffDateTime",
+				"type": "INT96"
+			},
+			{
+				"name": "puLocationId",
+				"type": "UTF8"
+			},
+			{
+				"name": "doLocationId",
+				"type": "UTF8"
+			},
+			{
+				"name": "srFlag",
+				"type": "UTF8"
+			},
+			{
+				"name": "puYear",
+				"type": "UTF8"
+			},
+			{
+				"name": "puMonth",
+				"type": "UTF8"
+			}
+		]
 	}
 }
