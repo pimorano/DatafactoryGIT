@@ -1,0 +1,21 @@
+{
+	"name": "DestinationDataset_7qp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "pierowebtooling1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "tempdata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

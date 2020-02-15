@@ -1,0 +1,20 @@
+{
+	"name": "FHV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CoreDataLakeStorageBackup",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "nyctlc/fhv",
+				"fileSystem": "root"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
