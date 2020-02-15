@@ -1,0 +1,10 @@
+{
+	"name": "azuresynapsepiero",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://azuresynapsepiero.dfs.core.windows.net"
+		}
+	}
+}
